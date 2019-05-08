@@ -2,13 +2,13 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.jsh</groupId>
-    <artifactId>jshERP</artifactId>
+    <groupId>com.psq</groupId>
+    <artifactId>ERP</artifactId>
     <version>2.0.2-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>jshERP</name>
-    <description>华夏ERP</description>
+    <name>ERP</name>
+    <description>ERP</description>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -45,7 +45,7 @@
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
-            <version>1.2.31</version>
+            <version>1.2.42</version>
         </dependency>
         <dependency>
             <groupId>com.alibaba</groupId>
