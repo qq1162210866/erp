@@ -52,7 +52,7 @@ public class LogCostFilter implements Filter {
             chain.doFilter(request, response);
             return;
         }
-        if (requestUrl != null && (requestUrl.contains("/login.html") || requestUrl.contains("/register.html"))) {
+        if (requestUrl != null && (requestUrl.contains("/templates/login.html") || requestUrl.contains("/register.html"))) {
             chain.doFilter(request, response);
             return;
         }
@@ -68,7 +68,7 @@ public class LogCostFilter implements Filter {
                 }
             }
         }
-        servletResponse.sendRedirect("/login.html");
+        servletResponse.sendRedirect("/login");
     }
 
     private static String regexPrefix = "^.*";

@@ -1,0 +1,6 @@
+version: "3"
+services:
+  erp:
+    image: springboot/erp
+    ports:
+      - "8090:8090"
