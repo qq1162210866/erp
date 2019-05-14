@@ -2,7 +2,6 @@ package com.jsh.erp.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
 
 /**
  * LoginController.java
@@ -13,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
  */
 
 @Controller
-public class LoginController {
+public class StaticFileController {
     /**
      * Description: 登录方法
      *
@@ -25,5 +24,10 @@ public class LoginController {
     @RequestMapping("login")
     public String goHome() {
         return "login";
+    }
+
+    @RequestMapping("index")
+    public String goIndex() {
+        return "index";
     }
 }

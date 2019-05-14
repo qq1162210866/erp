@@ -14,8 +14,8 @@ import java.util.regex.Pattern;
 
 @WebFilter(filterName = "LogCostFilter", urlPatterns = {"/psq"},
         initParams = {@WebInitParam(name = "ignoredUrl", value = ".css#.js#.jpg#.png#.gif#.ico"),
-                      @WebInitParam(name = "filterPath",
-                              value = "/user/login#/user/registerUser#/user/getTenantStatus")})
+                @WebInitParam(name = "filterPath",
+                        value = "/user/login#/user/registerUser#/user/getTenantStatus")})
 public class LogCostFilter implements Filter {
 
     private static final String FILTER_PATH = "filterPath";
@@ -52,7 +52,7 @@ public class LogCostFilter implements Filter {
             chain.doFilter(request, response);
             return;
         }
-        if (requestUrl != null && (requestUrl.contains("/templates/login.html") || requestUrl.contains("/register.html"))) {
+        if (requestUrl != null && (requestUrl.contains("/login.html") || requestUrl.contains("/register.html"))) {
             chain.doFilter(request, response);
             return;
         }
@@ -68,7 +68,7 @@ public class LogCostFilter implements Filter {
                 }
             }
         }
-        servletResponse.sendRedirect("/login");
+        servletResponse.sendRedirect("/login.html");
     }
 
     private static String regexPrefix = "^.*";
